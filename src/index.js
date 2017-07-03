@@ -153,7 +153,7 @@ class App extends React.Component {
         <div className="row justify-content-md-center">
           <div className="col-md-8 col-sm-12">
             <div className="display-1 text-center mb-2" id="title">
-              Twitch Channels
+              Twitch Channels<hr />
             </div>
             <Filter
               selected={this.state.selected}
