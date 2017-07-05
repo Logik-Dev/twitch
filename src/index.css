@@ -28,6 +28,9 @@ label {
 .logo {
   border-radius: 30px;
 }
+a:link {
+  text-decoration: none;
+}
 .name {
   font-family: 'Times New Roman', Times, serif;
   color: #494949;

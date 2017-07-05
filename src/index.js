@@ -53,29 +53,27 @@ const Filter = ({ selected, changeSelected }) => {
 
 const ChannelList = ({ channels }) => {
   const lis = channels.map(channel =>
-    <li key={channel.name} className="list-group-item">
-      <img
-        height="40"
-        width="40"
-        src={channel.logo}
-        alt="logo"
-        className="logo"
-      />
-      <a
-        className="name"
-        href={"https://twitch.tv/" + channel.name}
-        target="_blank"
-      >
-        {channel.name}
-      </a>
-      <span
-        className={
-          channel.online ? "content text-success" : "content text-danger"
-        }
-      >
-        {channel.content}
-      </span>
-    </li>
+    <a href={"https://twitch.tv/" + channel.name} target="_blank">
+      <li key={channel.name} className="list-group-item">
+        <img
+          height="40"
+          width="40"
+          src={channel.logo}
+          alt="logo"
+          className="logo"
+        />
+        <span className="name">
+          {channel.name}
+        </span>
+        <span
+          className={
+            channel.online ? "content text-success" : "content text-danger"
+          }
+        >
+          {channel.content}
+        </span>
+      </li>
+    </a>
   );
   return (
     <ul className="list-group">
@@ -107,6 +105,7 @@ class App extends React.Component {
       "RobotCaleb",
       "noobs2ninjas",
       "ogamingtv",
+      "allinity",
       "brunofin",
       "comster404"
     ]
